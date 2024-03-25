@@ -1,0 +1,62 @@
+.header {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.header img {
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: 10px;
+}
+.login-container {
+    margin-top: 50px;
+    margin-bottom: 60px;
+}
+.footer {
+    padding: 20px 0;
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+}
+.footer img {
+    width: 2em;
+    height: 2em;
+    margin-right: 10px;
+}
+.footer-content {
+    align-items: center;
+    justify-content: center;
+}
+.card {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.signup-container {
+    margin-bottom: 20px;
+}
+body {
+    background-color: #f8f9fa;
+}
+.link-primary {
+    color: #6c757d;
+    border-bottom: 2px solid #6c757d;
+    transition: all 0.3s ease-in-out;
+}
+.link-primary:hover {
+    color: #343a40;
+    border-bottom-color: #343a40;
+}
+.link-container {
+    text-align: center;
+    margin-top: 20px;
+}
+.link-container a {
+    color: #343a40;
+    text-decoration: none;
+}
+.link-container a:hover {
+    text-decoration: underline;
+}

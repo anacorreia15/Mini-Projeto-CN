@@ -1,0 +1,49 @@
+.header-img {
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: 10px;
+}
+.link-container a {
+    color: #343a40;
+    text-decoration: none;
+}
+.link-container a:hover {
+    text-decoration: underline;
+}
+body {
+    background-color: #f8f9fa;
+}
+.table {
+    width: 100%; /* Define a largura da tabela como 100% da largura do contêiner pai */
+    font-size: 16px; /* Define o tamanho da fonte */
+}
+
+.table th {
+    font-weight: bold; /* Define o peso da fonte para os cabeçalhos da tabela */
+}
+
+.table td,
+.table th {
+    padding: 10px; /* Adiciona preenchimento interno às células da tabela */
+}
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f8f9fa; /* Define uma cor de fundo alternada para linhas ímpares na tabela listrada */
+}
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 20px 0;
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+}
+.footer-content {
+    justify-content: center;
+    align-items: center;
+}
+.footer img {
+    width: 2em;
+    height: 2em;
+    margin-right: 10px;
+}

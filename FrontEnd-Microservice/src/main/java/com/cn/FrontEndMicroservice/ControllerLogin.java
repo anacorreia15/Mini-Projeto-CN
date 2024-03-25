@@ -6,9 +6,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class ControllerLogin {
 
-    @GetMapping({"/login", "/logout", "/"})
+    @GetMapping({"/", "/logout"})
     public String getLogin(){
-        return "login.html";
+        return "index.html";
     }
 
     @GetMapping({"/home"})
@@ -16,9 +16,18 @@ public class ControllerLogin {
         return "home.html";
     }
 
-    /*
-    @GetMapping("/acesso-negado")
-    public String getAcessoNegadoPage(){
-        return "acesso-negado.html";
-    } */
+    @GetMapping({"/signup-page"})
+    public String getSignupPage(){
+        return "signup.html";
+    }
+
+    @GetMapping("/profile")
+    public String getProfile(){
+        return "user-data.html";
+    }
+
+    @GetMapping("/access-denied")
+    public String getDeniedAccess(){
+        return "access-denied.html";
+    }
 }

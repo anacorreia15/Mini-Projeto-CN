@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="/css/style-home.css">
 </head>
 <body>
-<!--Header-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
         <img src="icon.png" alt="Logo" class="header-img">
@@ -18,7 +17,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" th:href="@{/home}" href="#">Home Page</a>
+                    <a class="nav-link" th:href="@{/home}" href="#">Home Page</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" th:href="@{/image-analysis}" href="#">Image Analysis</a>
@@ -33,16 +32,8 @@
         </div>
     </div>
 </nav>
-<!--Body-->
 <div class="container mt-5">
-    <h2>Update Files</h2>
-    <form>
-        <div class="mb-3">
-            <label for="file" class="form-label">Choose File</label>
-            <input type="file" class="form-control" id="file">
-        </div>
-        <button type="submit" class="btn btn-primary">Upload</button>
-    </form>
+    <h5>Access Denied - You are not authorised to access this resource.</h5>
 </div>
 <!-- Footer -->
 <div class="footer" id="footer">
@@ -53,7 +44,6 @@
         <p>&copy; 2024 Sherlock APP. All rights reserved.</p>
     </div>
 </div>
-
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 <!-- jQuery -->
