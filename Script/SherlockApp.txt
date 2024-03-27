@@ -17,9 +17,7 @@ az group create \
 
 #Azure App Service
 
-
-
-
+#teste commit
 
 #criar virtual network e uma subrede
 az network vnet create --name $VNET \
