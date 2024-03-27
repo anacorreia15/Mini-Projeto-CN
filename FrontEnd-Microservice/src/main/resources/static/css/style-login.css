@@ -14,21 +14,6 @@
     margin-top: 50px;
     margin-bottom: 60px;
 }
-.footer {
-    padding: 20px 0;
-    background-color: #343a40;
-    color: white;
-    text-align: center;
-}
-.footer img {
-    width: 2em;
-    height: 2em;
-    margin-right: 10px;
-}
-.footer-content {
-    align-items: center;
-    justify-content: center;
-}
 .card {
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 10px;
@@ -60,3 +45,26 @@ body {
 .link-container a:hover {
     text-decoration: underline;
 }
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 20px 0;
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    z-index: 999; /* Garante que o footer esteja acima de outros elementos */
+}
+
+.footer-content {
+    /*display: flex; /* Alterado de justify-content e align-items para display flex */
+    justify-content: center;
+    align-items: center;
+}
+
+.footer img {
+    width: 2em;
+    height: 2em;
+    margin-right: 10px;
+}
+

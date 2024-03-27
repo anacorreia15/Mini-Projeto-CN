@@ -26,6 +26,16 @@ public class ControllerLogin {
         return "user-data.html";
     }
 
+    @GetMapping("/image-analysis")
+    public String getGallery(){
+        return "gallery.html";
+    }
+
+    @GetMapping("/results")
+    public String getResults(){
+        return "classification-results.html";
+    }
+
     @GetMapping("/access-denied")
     public String getDeniedAccess(){
         return "access-denied.html";

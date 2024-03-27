@@ -1,0 +1,50 @@
+.header-img {
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: 10px;
+}
+.link-container a {
+    color: #343a40;
+    text-decoration: none;
+}
+.link-container a:hover {
+    text-decoration: underline;
+}
+body {
+    background-color: #f8f9fa;
+}
+.card-img-top {
+    max-height: 250px;
+    overflow: hidden;
+}
+
+.card-title a:link {
+    font-size: 30px;
+    background-color: transparent;
+    color: #000000;
+    text-decoration: none;
+}
+
+.card-title a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+}
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 20px 0;
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+}
+.footer-content {
+    justify-content: center;
+    align-items: center;
+}
+.footer img {
+    width: 2em;
+    height: 2em;
+    margin-right: 10px;
+}
