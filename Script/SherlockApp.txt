@@ -1,0 +1,106 @@
+REGION="ukshouth"
+RESOURCE_GROUP="SherlockApp" 
+//VNET="a_minha_vnet"
+//SUB_NET1="subrede_1"
+//SUB_NET2="subrede_2"
+//VM_NAME="vm1"
+//VM_IMAGE="Canonical:0001-com-ubuntu-server-focal-daily:20_04-daily-lts:20.04.202402140"
+
+#criar grupo de recursos
+az group create \
+--location $REGION \
+--name $RESOURCE_GROUP
+
+#Criar Docker
+
+#Comandos para o GIT 
+
+#Azure App Service
+
+#teste commit
+
+#criar virtual network e uma subrede
+az network vnet create --name $VNET \
+                        --resource-group $RESOURCE_GROUP \
+                        --address-prefixes 10.0.0.0/16 \
+                        --location $REGION \
+                        --subnet-name $SUB_NET1 \
+                        --subnet-prefixes 10.0.8.0/24
+
+#criar outra subrede
+az network vnet subnet create --name $SUB_NET2 \
+                              --resource-group $RESOURCE_GROUP \
+                              --vnet-name $VNET \
+                              --address-prefixes 10.0.9.0/24
+
+#criar a vm1
+az vm create --name $VM_NAME \
+             --resource-group $RESOURCE_GROUP \
+             --image $VM_IMAGE \
+             --location $REGION \
+             --admin-username aluno \
+             --admin-password Aluno1234567! \
+             --size Standard_B1ms \
+             --vnet-name $VNET \
+             --subnet $SUB_NET1 \
+             --public-ip-address "vm1-ip" \
+             --custom-data cloud-init1.txt
+
+az vm open-port --resource-group $RESOURCE_GROUP \
+                --name $VM_NAME \
+                --port 22,80,443
+
+#criar a vm2
+az vm create --name $VM_NAME \
+             --resource-group $RESOURCE_GROUP \
+             --image $VM_IMAGE \
+             --location $REGION \
+             --zone 3 \
+             --admin-username aluno \
+             --admin-password Aluno1234567! \
+             --size Standard_B1ms \
+             --vnet-name $VNET \
+             --subnet $SUB_NET2 \
+             --custom-data cloud-init2.txt
+
+az vm open-port --resource-group $RESOURCE_GROUP \
+                --name $VM_NAME \
+                --port 22,80,443
+
+#nao esquecer de alterar a regiao
+#criar outra virtual network noutra regiao
+az network vnet create --name $VNET \
+                        --resource-group $RESOURCE_GROUP \
+                        --address-prefixes 10.5.0.0/16 \
+                        --location $REGION \
+                        --subnet-name $SUB_NET1 \
+                        --subnet-prefixes 10.5.1.0/24
+
+#criar a vm3
+az vm create --name $VM_NAME \
+             --resource-group $RESOURCE_GROUP \
+             --image $VM_IMAGE \
+             --location $REGION \
+             --zone 1 \
+             --admin-username aluno \
+             --admin-password Aluno1234567! \
+             --size Standard_B1ms \
+             --vnet-name $VNET \
+             --subnet $SUB_NET1 \
+             --public-ip-address "" \
+             --custom-data cloud-init3.txt
+
+az vm open-port --resource-group $RESOURCE_GROUP \
+                --name $VM_NAME \
+                --port 22,80,443
+
+#Peering - NAO FICOU A FUNCIONAR - PERGUNTAR 
+az network vnet peering create --name $PEERING_NAME \
+                               --remote-vnet $VNET2 \
+                               --resource-group $RESOURCE_GROUP \
+                               --vnet-name $VNET1 \
+                               --allow-vnet-access y
+
+
+#Bastion ??
+
